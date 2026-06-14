@@ -104,3 +104,4 @@ python app.py
 | Risk | `docs/risk.txt` |
 | Ticket to Ride | `docs/ticket_to_ride.txt` |
 | Uno | `docs/uno.txt` |
+# rulesbot
