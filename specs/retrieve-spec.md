@@ -1,7 +1,7 @@
 # Spec: `retrieve()`
 
 **File:** `retriever.py`
-**Status:** Spec incomplete — fill in all blank fields before implementing
+**Status:** Spec Complete — fill in all blank fields before implementing
 
 ---
 

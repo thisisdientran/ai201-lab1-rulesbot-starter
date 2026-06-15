@@ -53,6 +53,7 @@ Returns a fallback string (not an error) when `retrieved_chunks` is empty.
 
 ```
 [your answer here]
+I will write it should only answer based on the answered data rather than create it's own, if not in training data, then say I don't know
 ```
 
 ---
@@ -63,6 +64,7 @@ Returns a fallback string (not an error) when `retrieved_chunks` is empty.
 
 ```
 [your answer here]
+Only answered based on the training data, if the question not in the training data, answer I don't know
 ```
 
 ---
@@ -73,6 +75,7 @@ Returns a fallback string (not an error) when `retrieved_chunks` is empty.
 
 ```
 [your answer here]
+I don't know
 ```
 
 ---
@@ -83,6 +86,7 @@ Returns a fallback string (not an error) when `retrieved_chunks` is empty.
 
 ```
 [your answer here]
+If distance >0.5, say, based on what the understand I know, but please take it with a grain of salt and then answer the question
 ```
 
 ---
@@ -93,6 +97,7 @@ Returns a fallback string (not an error) when `retrieved_chunks` is empty.
 
 ```
 [your answer here]
+show all the important detailed like chunkId, distance in system to easy to debug and show answer on user side
 ```
 
 ---
