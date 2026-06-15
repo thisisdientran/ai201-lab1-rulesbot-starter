@@ -34,6 +34,26 @@ def generate_response(query, retrieved_chunks):
             "I couldn't find anything relevant in the loaded rule books. "
             "Try rephrasing your question — or check that your ingestion pipeline is working."
         )
-
+    
     # Your implementation here.
-    return "⚙️ Response generation not yet implemented. Complete Milestone 3 to activate answers."
+    answer = _client.chat.completions.create(
+      model = LLM_MODEL,
+      messages=[
+        {
+          "role": "system",
+          "content": (
+              "You are a rules assistant. Answer using only the retrieved rule chunks. "
+              "Do not use outside knowledge. Identify which game the answer comes from. "
+              "If the answer is not clearly supported by the chunks, say: "
+              "'I don't know based on the loaded rules.'"
+            ),
+        },
+        {
+          "role": "user",
+          "content": retrieved_chunks[0]["text"]
+        }
+      ]
+    )
+
+    # return "⚙️ Response generation not yet implemented. Complete Milestone 3 to activate answers."
+    return answer.choices[0].message.content
